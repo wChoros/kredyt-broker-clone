@@ -1,4 +1,7 @@
-// listen on screen resize event
+const hamburger = document.querySelector('.ham1')
+const menu = document.querySelector('menu')
+let isFirstTime = true
+
 const gridItems_3_rows = `<div class="grid-item">
 <img src="assets/images/icons/określenie potrzeb finansowych.png" alt="">
 <h4>Określenie potrzeb finansowych</h4>
@@ -85,8 +88,29 @@ function insert_grid_based_on_width() {
     else if (window.innerWidth < 1200) {
         grid.innerHTML = gridItems_2_rows
     }
+    if (window.innerWidth > 800) {
+        menu.classList.remove('menu-show')
+        menu.classList.remove('menu-hide')
+        menu.classList.remove('menu-active')
+        hamburger.classList.remove('active')
+        isFirstTime = true
+    }
 }
 
 insert_grid_based_on_width()
 
 window.addEventListener('resize', insert_grid_based_on_width);
+
+isFirstTime = true
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    menu.classList.toggle('menu-show')
+    menu.classList.toggle('menu-active')
+    if (isFirstTime) {
+        isFirstTime = false
+    }
+    else {
+        menu.classList.toggle('menu-hide')
+    }
+})
