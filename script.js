@@ -1,5 +1,6 @@
 const hamburger = document.querySelector('.ham1')
 const menu = document.querySelector('menu')
+const logoContainer = document.querySelector('.logo-container') 
 let isFirstTime = true
 
 const gridItems_3_rows = `<div class="grid-item">
@@ -94,6 +95,7 @@ function insert_grid_based_on_width() {
         menu.classList.remove('menu-active')
         hamburger.classList.remove('active')
         isFirstTime = true
+        logoContainer.style.display = 'flex'
     }
 }
 
@@ -107,6 +109,16 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active')
     menu.classList.toggle('menu-show')
     menu.classList.toggle('menu-active')
+    
+    if (logoContainer.style.display == 'none') {
+        setTimeout(() => {
+            logoContainer.style.display = 'flex'
+        }, 1010)
+    } 
+    else {
+        logoContainer.style.display = 'none'
+    }
+    
     if (isFirstTime) {
         isFirstTime = false
     }
