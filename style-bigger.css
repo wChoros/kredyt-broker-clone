@@ -49,6 +49,8 @@ menu {
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
+    transition: 0.1s;
+
 }
 
 .menu-entry:hover {
