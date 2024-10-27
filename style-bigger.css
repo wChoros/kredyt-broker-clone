@@ -121,6 +121,17 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+article:first-of-type {
+    padding-top: 50px;
+}
+article:nth-of-type(4) {
+    padding-bottom: 50px;
+}
+article:last-of-type, article:nth-of-type(5) {
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -136,7 +147,7 @@ article {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 50px;
     border-radius: 20%;
-    width: 30%;
+    width: 20%;
 }
 
 .article-content {
@@ -173,18 +184,6 @@ article:nth-of-type(even) {
     flex-direction: row-reverse;
 }
 
-article.smaller .article-content {
-    width: 40%;
-}
-
-article.smaller .article-icon-container {
-    width: 30%;
-}
-
-article.smaller .article-icon-container img {
-    width: 40%;
-}
-
 p b {
     font-weight: 700;
     font-size: 17px;
@@ -208,7 +207,7 @@ p b {
 
 .grid-item {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -228,7 +227,8 @@ p b {
 
 .grid-item img {
     margin-bottom: 15px;
-    width: 30%;
+    width: 100px;
+    height: 100px;
 }
 
 .grid-item h4 {
@@ -238,6 +238,9 @@ p b {
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 article#centered {
@@ -324,4 +327,8 @@ footer .footer-info-container h3 {
     font-weight: 700;
     margin: 0;
     padding: 0;
+}
+
+footer a {
+    color: white;
 }

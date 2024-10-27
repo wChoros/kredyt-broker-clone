@@ -68,9 +68,9 @@ menu {
     position: absolute;
     justify-content: center;
     top: 51px;
-    left: 15%;
-    width: 246px;
-    height: 220px;
+    left: 10%;
+    width: 200px;
+    height: 180px;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -87,7 +87,7 @@ menu {
     font-family: "Kaushan Script", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 26px;
+    font-size: 21px;
 }
 
 .section-title-container {
@@ -121,6 +121,17 @@ article {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+article:first-of-type {
+    padding-top: 50px;
+}
+article:nth-of-type(4) {
+    padding-bottom: 50px;
+}
+article:last-of-type, article:nth-of-type(5) {
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -214,16 +225,21 @@ p b {
 
 .grid-item img {
     margin-bottom: 15px;
-    width: 30%;
+    width: 20%;
 }
 
 .grid-item h4 {
     font-size: 20px;
     font-weight: 500;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
 }
 
 article#centered .article-icon-container {
@@ -296,4 +312,8 @@ footer .footer-info-container h3 {
     font-weight: 700;
     margin: 0;
     padding: 0;
+}
+
+footer a {
+    color: white;
 }
